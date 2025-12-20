@@ -1,0 +1,8 @@
+# Ignore everything
+*
+# Do not ignore directories (otherwise all contents are ignored by performance reasons)
+!*/
+# Do not ignore files with an extension (files containing a dot)
+!*.*
+# Ensure the .gitignore file itself is not ignored
+!.gitignore
