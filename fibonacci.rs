@@ -1,10 +1,18 @@
 use std::io;
 
-fn get_fibonacci(num: usize) -> usize {
+fn get_fibonacci(num: u64) -> u64 { 
     if num == 0 || num == 1 {
         return num;
     } else {
-        //TODO: Implement logic here
+        let mut a: u64 = 0;
+        let mut b: u64 = 1;
+
+        for _ in 2..=num {
+            let next = a + b;
+            a = b;
+            b = next;
+        }
+        b // The last expression in a function without a trailing semicolon is the return value.
     }
 }
 
@@ -19,10 +27,10 @@ fn main() {
             .read_line(&mut input)
             .expect("Failed to read lines");
 
-        match input.trim().parse::<usize>() {
+        match input.trim().parse::<u64>() {
             Ok(num) => {
                 let nth_term = get_fibonacci(num);
-                println!("The {}th fibonacci number is:{}", input, nth_term);
+                println!("The fibonacci number at position {input} is: {nth_term}");
                 break;
             }
 
