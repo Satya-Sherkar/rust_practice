@@ -6,3 +6,4 @@
 !*.*
 # Ensure the .gitignore file itself is not ignored
 !.gitignore
+test.rs
